@@ -1,0 +1,31 @@
+<html>
+<head>
+    	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    
+        <title>Plomer 3 test</title>
+        <script>
+            document.addEventListener('WebComponentsReady', function componentsReady() {
+            document.removeEventListener('WebComponentsReady', componentsReady, false);
+
+            var scriptModule = document.createElement('script');
+            scriptModule.async = true
+            scriptModule.src = './bundle.js';
+            scriptModule.setAttribute('type', 'module');
+
+            var refScript = document.body.getElementsByTagName('script')[0];
+            refScript.parentNode.insertBefore(scriptModule, refScript);
+            }, false);
+        </script>
+</head>
+<body>
+   <chat-window>
+
+   </chat-window>
+    <h1>Polymer 3 FTW</h1>   
+   
+    <script src="bundle.js"></script>
+    <script src="./vendor/custom-elements-es5-adapter.js" async nomodule></script>
+    <script src="./vendor/webcomponents-loader.js" async></script>
+</body>
+</html>
